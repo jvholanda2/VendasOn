@@ -1,19 +1,7 @@
-const modalOverlay = document.querySelector('.modal-overlay')
-const cards = document.querySelectorAll('.card')
+const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
+});
 
-for (let card of cards) {
-    card.addEventListener("click", function(){
-        const videoID = card.getAttribute("id")
-        //modalOverlay.classList.add('active')
-        window.location.href = `/video?id=${videoID}`
-        //modalOverlay.querySelector("iframe").src = `https://www.youtube.com/embed/${videoID}`
-    })
+if(params.e) {
+    alert("Login ou senha incorretos. Tente novamente!")
 }
-
-
-// const closeModal = document.querySelector(".close-modal").addEventListener("click", function(){
-//     modalOverlay.classList.remove('active')
-//     modalOverlay.querySelector("iframe").src = ""
-
-// })
-

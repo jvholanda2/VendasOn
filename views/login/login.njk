@@ -4,15 +4,15 @@
 
 <div class="content">
     <div class="wrapper-login">
-        <form class="form-login"> 
+        <form class="form-login" action="/auth" method="post"> 
             <label>Entrar</label>
             <label>Email</label>
-            <input placeholder="Digite seu email">
+            <input placeholder="Digite seu email" name="username" id="username" required>
             <label>Senha</label>
-            <input placeholder="Digite sua senha">
+            <input type="password" placeholder="Digite sua senha" name="password" id="password" required>
             <button class="login-button">Entrar</button>
             <div class="wrapper-login-links">
-                <a>Registre-se</a>
+                <a href="/register">Registre-se</a>
                 <a>Esqueci a senha</a>
             </div>
         </form>
