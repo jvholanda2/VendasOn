@@ -77,7 +77,7 @@ routes.get('/logout',function(req,res){
     if(req.session){
         req.session.destroy();
     }
-    res.redirect('/login')
+    res.redirect('/login');
 })
 
 module.exports = routes
